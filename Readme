@@ -1,1 +1,6 @@
-P
+Para executar é necessário remover /swagger do link abaixo
+http://localhost:5265/swagger
+
+O sistema é capaz de realizar cruds de projeto, clientes, tarefas, sprints, equipes e membros,
+
+Existe relacionamento entre projeto, equipes, membros sprints e tarefas
