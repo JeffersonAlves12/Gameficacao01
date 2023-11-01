@@ -1,0 +1,62 @@
+@page
+@model Gameficacao01.API.Pages.Tarefas.Criar
+@{
+    ViewData["Title"] = "Criar";
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Nova Tarefa</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Adicionar Nova Tarefa</h2>
+        <hr>
+        <form method="post">
+            <div class="form-group">
+                <label for="Nome">Nome:</label>
+                <input type="text" class="form-control" id="Nome" asp-for="Tarefa.Nome" required />
+            </div>
+            <div class="form-group">
+                <label for="Descricao">Descrição:</label>
+                <textarea class="form-control" id="Descricao" asp-for="Tarefa.Descricao" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="Status">Status:</label>
+                <select class="form-control" id="Status" asp-for="Tarefa.Status" required>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Concluído">Concluído</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Responsavel">Responsável:</label>
+                <input type="text" class="form-control" id="Responsavel" asp-for="Tarefa.Responsavel" required />
+            </div>
+            <div class="form-group">
+                <label for="DataVencimento">Data de Vencimento:</label>
+                <input type="date" class="form-control" id="DataVencimento" asp-for="Tarefa.DataVencimento" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="./Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+        <div class="form-group">
+    <label for="Projeto">Projeto:</label>
+    <select class="form-control" id="Projeto" asp-for="Tarefa.ProjetoId" required>
+        <option value="">-- Selecionar Projeto --</option>
+        @foreach (var projeto in Model.Projetos)
+        {
+            <option value="@projeto.Id">@projeto.Nome</option>
+        }
+    </select>
+</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+@page
+@model Gameficacao01.API.Pages.Sprints.Index
+
+@{
+    ViewData["Title"] = "Lista de Sprints";
+}
+
+<form method="get">
+    <input type="text" asp-for="FiltroNome" placeholder="Filtrar por nome da Sprint" />
+    <select asp-for="Ordenacao">
+        <option value="NomeAsc">Nome (A-Z)</option>
+        <option value="DataInicioDesc">Data de Início (mais recente primeiro)</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Aplicar</button>
+</form>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-page="./Criar" class="btn btn-primary">Criar nova Sprint</a>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="mt-4">
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.SprintList[0].Id)</th>
+                    <th>@Html.DisplayNameFor(model => model.SprintList[0].Nome)</th>
+                    <th>@Html.DisplayNameFor(model => model.SprintList[0].DataInicio)</th>
+                    <th>@Html.DisplayNameFor(model => model.SprintList[0].DataTermino)</th>
+                    <th>Operações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var sprint in Model.SprintList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => sprint.Id)</td>
+                        <td>@Html.DisplayFor(model => sprint.Nome)</td>
+                        <td>@Html.DisplayFor(model => sprint.DataInicio)</td>
+                        <td>@Html.DisplayFor(model => sprint.DataTermino)</td>
+                        <td>
+                            <a asp-page="./Atualizar" asp-route-id="@sprint.Id"
+                                class="btn btn-warning btn-sm me-2">Editar</a>
+                            <a asp-page="./Visualizar" asp-route-id="@sprint.Id"
+                                class="btn btn-info btn-sm me-2">Visualizar</a>
+                            <a asp-page="./Deletar" asp-route-id="@sprint.Id" class="btn btn-danger btn-sm">Remover</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

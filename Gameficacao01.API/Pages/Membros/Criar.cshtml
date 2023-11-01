@@ -1,0 +1,44 @@
+@page
+@model Gameficacao01.API.Pages.Membros.Criar
+@{
+    ViewData["Title"] = "Criar";
+}
+
+<html lang="en">
+<head>
+    <!-- ... -->
+    <title>Adicionar Membro</title>
+    <!-- ... -->
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Adicionar Novo Membro</h2>
+        <hr>
+        <form method="post">
+            <!-- Nome do Membro -->
+            <div class="form-group">
+                <label for="Nome">Nome:</label>
+                <input type="text" class="form-control" id="Nome" asp-for="Membro.Nome" required />
+            </div>
+
+            <!-- Papel do Membro -->
+            <div class="form-group">
+                <label for="Papel">Papel:</label>
+                <input type="text" class="form-control" id="Papel" asp-for="Membro.Papel" required />
+            </div>
+
+            <!-- Equipe do Membro -->
+            <div class="form-group">
+                <label for="EquipedId">Equipe:</label>
+                <select class="form-control" id="EquipedId" asp-for="Membro.EquipeId" asp-items="Model.Equipes">
+                    <option value="">Selecione uma equipe</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="./Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+    <!-- scripts ... -->
+</body>
+</html>

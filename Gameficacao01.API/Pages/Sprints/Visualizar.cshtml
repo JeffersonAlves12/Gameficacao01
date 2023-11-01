@@ -1,0 +1,36 @@
+@page
+@model Gameficacao01.API.Pages.Sprints.Visualizar
+@{
+    ViewData["Title"] = "Visualizar Sprint";
+}
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+    <hr>
+
+    <dl class="row">
+        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.Sprint.Id</dd>
+
+        <dt class="col-sm-2">Nome</dt>
+        <dd class="col-sm-10">@Model.Sprint.Nome</dd>
+
+        <dt class="col-sm-2">Data de Início</dt>
+        <dd class="col-sm-10">@Model.Sprint.DataInicio.ToShortDateString()</dd>
+
+        <dt class="col-sm-2">Data de Término</dt>
+        <dd class="col-sm-10">@Model.Sprint.DataTermino.ToShortDateString()</dd>
+
+        <dt class="col-sm-2">Tarefas Associadas</dt>
+        <dd class="col-sm-10">
+            <ul>
+                @foreach (var tarefa in Model.Sprint.Tarefas)
+                {
+                    <li>@tarefa.Nome</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+
+    <a href="/Sprints" class="btn btn-secondary">Voltar</a>
+</div>

@@ -1,0 +1,41 @@
+@page
+@model Gameficacao01.API.Pages.Clientes.Criar
+@{
+    ViewData["Title"] = "Criar";
+}
+
+<body>
+    <div class="container mt-5">
+        <h2>Criar Cliente</h2>
+        <hr>
+        <form method="post">
+            <div class="form-group">
+                <label for="Nome">Nome do Cliente:</label>
+                <input type="text" class="form-control" id="Nome" asp-for="Cliente.Nome" required />
+            </div>
+            <div class="form-group">
+                <label for="Email">Email do Cliente:</label>
+                <input type="email" class="form-control" id="Email" asp-for="Cliente.Email" />
+            </div>
+            <div class="form-group">
+                <label for="Telefone">Telefone do Cliente:</label>
+                <input type="text" class="form-control" id="Telefone" asp-for="Cliente.Telefone" />
+            </div>
+            <div class="form-group">
+                <label for="Projeto">Projeto Associado:</label>
+                <select class="form-control" id="Projeto" asp-for="SelectedProjetoId">
+                    <option value="">Selecione um projeto</option>
+                    @foreach (var projeto in Model.Projetos)
+                    {
+                        <option value="@projeto.Id">@projeto.Nome</option>
+                    }
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="./Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+
+</body>
+</html>

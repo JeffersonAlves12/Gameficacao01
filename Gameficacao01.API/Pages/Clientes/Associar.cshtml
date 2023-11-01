@@ -1,0 +1,33 @@
+@page
+@model Gameficacao01.API.Pages.Clientes.Associar
+@{
+    ViewData["Title"] = "Associar Projeto a Cliente";
+}
+
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+    <hr>
+    <form method="post">
+        <div class="form-group">
+            <label for="ClienteId">Cliente:</label>
+            <select class="form-control" id="ClienteId" asp-for="ClienteId" required>
+                @foreach (var cliente in Model.Clientes)
+                {
+                    <option value="@cliente.Id">@cliente.Nome</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ProjetoId">Projeto:</label>
+            <select class="form-control" id="ProjetoId" asp-for="ProjetoId" required>
+                @foreach (var projeto in Model.Projetos)
+                {
+                    <option value="@projeto.Id">@projeto.Nome</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Associar</button>
+        <a href="./Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

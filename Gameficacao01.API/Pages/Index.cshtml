@@ -1,0 +1,38 @@
+@page
+@model Gameficacao01.API.Pages.Index
+@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<div class="container mt-5">
+    <h1>Resumo do Sistema</h1>
+    <hr>
+
+    <!-- Estatísticas -->
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Total de Projetos</h4>
+            <p>@Model.TotalProjetos</p>
+        </div>
+        <div class="col-md-3">
+            <h4>Total de Sprints</h4>
+            <p>@Model.TotalSprints</p>
+        </div>
+        <div class="col-md-3">
+            <h4>Total de Equipes</h4>
+            <p>@Model.TotalEquipes</p>
+        </div>
+        <div class="col-md-3">
+            <h4>Status dos Projetos</h4>
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: @Model.PercentualProjetosEmAndamento%" title="Em Andamento"></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: @Model.PercentualProjetosConcluidos%" title="Concluído"></div>
+                <div class="progress-bar bg-primary" role="progressbar" style="width: @Model.PercentualProjetosPendentes%" title="Pendente"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Outras informações que você achar relevante podem ser adicionadas aqui -->
+
+
+</div>

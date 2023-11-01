@@ -1,0 +1,157 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Gameficacao01.API
+build_property.RootNamespace = Gameficacao01.API
+build_property.ProjectDir = C:\Users\guilh\Desktop\Gameficacao01-master\Gameficacao01-master\Gameficacao01.API\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\guilh\Desktop\Gameficacao01-master\Gameficacao01-master\Gameficacao01.API
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Clientes/Associar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQXNzb2NpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Clientes/Atualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQXR1YWxpemFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Clientes/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Clientes/Deletar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRGVsZXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Clientes/Visualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcVmlzdWFsaXphci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Equipes/Atualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXF1aXBlc1xBdHVhbGl6YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Equipes/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXF1aXBlc1xDcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Equipes/Deletar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXF1aXBlc1xEZWxldGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Equipes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXF1aXBlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Equipes/Visualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXF1aXBlc1xWaXN1YWxpemFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Membros/Atualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYnJvc1xBdHVhbGl6YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Membros/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYnJvc1xDcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Membros/Deletar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYnJvc1xEZWxldGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Membros/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYnJvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Projetos/Atualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamV0b3NcQXR1YWxpemFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Projetos/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamV0b3NcQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Projetos/Deletar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamV0b3NcRGVsZXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Projetos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamV0b3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Projetos/Visualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamV0b3NcVmlzdWFsaXphci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Shared/_MainLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NYWluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Shared/_MainMenuPartialPages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NYWluTWVudVBhcnRpYWxQYWdlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Sprints/Atualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ByaW50c1xBdHVhbGl6YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Sprints/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ByaW50c1xDcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Sprints/Deletar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ByaW50c1xEZWxldGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Sprints/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ByaW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Sprints/Visualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ByaW50c1xWaXN1YWxpemFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Tarefas/Atualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhc1xBdHVhbGl6YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Tarefas/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhc1xDcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Tarefas/Deletar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhc1xEZWxldGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Tarefas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/Tarefas/Visualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhc1xWaXN1YWxpemFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Gameficacao01-master/Gameficacao01-master/Gameficacao01.API/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

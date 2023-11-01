@@ -1,0 +1,58 @@
+@page
+@model Gameficacao01.API.Pages.Tarefas.Index
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<form method="get">
+    <input type="text" asp-for="FiltroNome" placeholder="Filtrar por nome da Tarefa" />
+    <select asp-for="Ordenacao">
+        <option value="NomeAsc">Nome (A-Z)</option>
+        <option value="DataVencimentoDesc">Data de Vencimento (mais recente primeiro)</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Aplicar</button>
+</form>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-page="./Criar" class="btn btn-primary">Criar nova Tarefa</a>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="mt-4">
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.TarefaList[0].Id)</th>
+                    <th>@Html.DisplayNameFor(model => model.TarefaList[0].Nome)</th>
+                    <th>@Html.DisplayNameFor(model => model.TarefaList[0].DataVencimento)</th>
+                    <th>Operações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var tarefa in Model.TarefaList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => tarefa.Id)</td>
+                        <td>@Html.DisplayFor(model => tarefa.Nome)</td>
+                        <td>@Html.DisplayFor(model => tarefa.DataVencimento)</td>
+                        <td>
+                            <a asp-page="./Atualizar" asp-route-id="@tarefa.Id"
+                                class="btn btn-warning btn-sm me-2">Editar</a>
+                            <a asp-page="./Visualizar" asp-route-id="@tarefa.Id"
+                                class="btn btn-info btn-sm me-2">Visualizar</a>
+                            <a asp-page="./Deletar" asp-route-id="@tarefa.Id" class="btn btn-danger btn-sm">Remover</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+@page
+@model Gameficacao01.API.Pages.Projetos.Visualizar
+@{
+    ViewData["Title"] = "Visualizar Projeto";
+}
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+    <hr>
+
+    <dl class="row">
+        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.Projeto.Id</dd>
+
+        <dt class="col-sm-2">Nome</dt>
+        <dd class="col-sm-10">@Model.Projeto.Nome</dd>
+
+        <dt class="col-sm-2">Descrição</dt>
+        <dd class="col-sm-10">@Model.Projeto.Descricao</dd>
+
+        <dt class="col-sm-2">Data de Início</dt>
+        <dd class="col-sm-10">@Model.Projeto.DataInicio.ToShortDateString()</dd>
+
+        <dt class="col-sm-2">Data de Conclusão Prevista</dt>
+        <dd class="col-sm-10">@Model.Projeto.DataConclusaoPrevista?.ToShortDateString()</dd>
+
+        <dt class="col-sm-2">Status</dt>
+        <dd class="col-sm-10">@Model.Projeto.Status</dd>
+
+        <dt class="col-sm-2">Equipe Associada</dt>
+        <dd class="col-sm-10">@Model.Projeto.Equipe?.Nome</dd>
+
+        <dt class="col-sm-2">Cliente Associado</dt>
+        <dd class="col-sm-10">@Model.Projeto.Clientes?.Nome</dd>
+
+        <dt class="col-sm-2">Tarefas Associadas</dt>
+        <dd class="col-sm-10">
+            <ul>
+                @foreach (var tarefa in Model.Projeto.Tarefas)
+                {
+                    <li>@tarefa.Nome</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+
+    <a href="./Index" class="btn btn-secondary">Voltar</a>
+</div>
+

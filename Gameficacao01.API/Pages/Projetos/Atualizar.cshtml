@@ -1,0 +1,61 @@
+@page "/Projetos/Atualizar/{id:int}"
+@model Gameficacao01.API.Pages.Projetos.Atualizar
+@{
+    ViewData["Title"] = "Atualizar Projeto";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-4">Atualizar Projeto</h2>
+
+            <form method="post" id="projetoForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <input type="hidden" asp-for="ProjetoModel.Id" />
+
+                <!-- Campos relevantes ao Projeto -->
+                <!-- Campo Nome do Projeto -->
+                <div class="form-group">
+                    <label asp-for="ProjetoModel.Nome">Nome:</label>
+                    <input asp-for="ProjetoModel.Nome" class="form-control" />
+                    <span asp-validation-for="ProjetoModel.Nome" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Descrição -->
+                <div class="form-group">
+                    <label asp-for="ProjetoModel.Descricao">Descrição:</label>
+                    <textarea asp-for="ProjetoModel.Descricao" class="form-control"></textarea>
+                    <span asp-validation-for="ProjetoModel.Descricao" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Data Início -->
+                <div class="form-group">
+                    <label asp-for="ProjetoModel.DataInicio">Data de Início:</label>
+                    <input type="date" asp-for="ProjetoModel.DataInicio" class="form-control" />
+                    <span asp-validation-for="ProjetoModel.DataInicio" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Data de Conclusão Prevista -->
+                <div class="form-group">
+                    <label asp-for="ProjetoModel.DataConclusaoPrevista">Data de Conclusão Prevista:</label>
+                    <input type="date" asp-for="ProjetoModel.DataConclusaoPrevista" class="form-control" />
+                    <span asp-validation-for="ProjetoModel.DataConclusaoPrevista" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Status -->
+                <div class="form-group">
+                    <label asp-for="ProjetoModel.Status">Status:</label>
+                    <input asp-for="ProjetoModel.Status" class="form-control" />
+                    <span asp-validation-for="ProjetoModel.Status" class="text-danger"></span>
+                </div>
+
+                <!-- Botões -->
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-success">Atualizar</button>
+                    <a asp-page="/Projetos/Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

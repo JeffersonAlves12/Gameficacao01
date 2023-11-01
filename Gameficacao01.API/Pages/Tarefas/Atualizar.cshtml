@@ -1,0 +1,61 @@
+@page "/Tarefas/Atualizar/{id:int}"
+@model Gameficacao01.API.Pages.Tarefas.Atualizar
+@{
+    ViewData["Title"] = "Atualizar Tarefa";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-4">Atualizar Tarefa</h2>
+
+            <form method="post" id="tarefaForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <input type="hidden" asp-for="TarefaModel.Id" />
+
+                <!-- Campos relevantes à Tarefa -->
+                <!-- Campo Nome da Tarefa -->
+                <div class="form-group">
+                    <label asp-for="TarefaModel.Nome">Nome:</label>
+                    <input asp-for="TarefaModel.Nome" class="form-control" />
+                    <span asp-validation-for="TarefaModel.Nome" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Descrição -->
+                <div class="form-group">
+                    <label asp-for="TarefaModel.Descricao">Descrição:</label>
+                    <textarea asp-for="TarefaModel.Descricao" class="form-control"></textarea>
+                    <span asp-validation-for="TarefaModel.Descricao" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Data de Vencimento -->
+                <div class="form-group">
+                    <label asp-for="TarefaModel.DataVencimento">Data de Vencimento:</label>
+                    <input type="date" asp-for="TarefaModel.DataVencimento" class="form-control" />
+                    <span asp-validation-for="TarefaModel.DataVencimento" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Status -->
+                <div class="form-group">
+                    <label asp-for="TarefaModel.Status">Status:</label>
+                    <input asp-for="TarefaModel.Status" class="form-control" />
+                    <span asp-validation-for="TarefaModel.Status" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Responsável -->
+                <div class="form-group">
+                    <label asp-for="TarefaModel.Responsavel">Responsável:</label>
+                    <input asp-for="TarefaModel.Responsavel" class="form-control" />
+                    <span asp-validation-for="TarefaModel.Responsavel" class="text-danger"></span>
+                </div>
+
+                <!-- Botões -->
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-success">Atualizar</button>
+                    <a asp-page="/Tarefas/Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

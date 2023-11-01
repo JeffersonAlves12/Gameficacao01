@@ -1,0 +1,40 @@
+@page "/Membros/Atualizar/{id:int}"
+@model Gameficacao01.API.Pages.Membros.Atualizar
+@{
+    ViewData["Title"] = "Atualizar Membro";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-4">Atualizar Membro</h2>
+
+            <form method="post" id="membroForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <input type="hidden" asp-for="MembroModel.Id" />
+
+                <!-- Campos relevantes ao Membro -->
+                <!-- Campo Nome do Membro -->
+                <div class="form-group">
+                    <label asp-for="MembroModel.Nome">Nome:</label>
+                    <input asp-for="MembroModel.Nome" class="form-control" />
+                    <span asp-validation-for="MembroModel.Nome" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Papel do Membro -->
+                <div class="form-group">
+                    <label asp-for="MembroModel.Papel">Papel:</label>
+                    <input asp-for="MembroModel.Papel" class="form-control" />
+                    <span asp-validation-for="MembroModel.Papel" class="text-danger"></span>
+                </div>
+
+                <!-- Botões -->
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-success">Atualizar</button>
+                    <a asp-page="/Membros/Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+@page "/Equipes/Deletar/{id:int}"
+@model Gameficacao01.API.Pages.Equipes.Deletar
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-4">Excluir Equipe</h2>
+            
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <input type="hidden" asp-for="EquipeModel.Id"/>
+
+                <!-- Confirmação -->
+                <div class="alert alert-danger">
+                    Tem certeza de que deseja excluir a equipe <strong>@Model.EquipeModel.Nome</strong>?
+                </div>
+
+                <!-- Botões -->
+                <div class="form-group mt-3">
+                    <input type="submit" class="btn btn-danger" value="Excluir">
+                    <a asp-page="/Equipes/Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

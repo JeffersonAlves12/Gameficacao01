@@ -1,0 +1,38 @@
+@page "/Tarefas/Visualizar/{id:int}"
+@model Gameficacao01.API.Pages.Tarefas.Visualizar
+@{
+    ViewData["Title"] = "Visualizar Tarefa";
+}
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+    <hr>
+
+    <dl class="row">
+        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.Tarefa.Id</dd>
+
+        <dt class="col-sm-2">Nome</dt>
+        <dd class="col-sm-10">@Model.Tarefa.Nome</dd>
+
+        <dt class="col-sm-2">Descrição</dt>
+        <dd class="col-sm-10">@Model.Tarefa.Descricao</dd>
+
+        <dt class="col-sm-2">Status</dt>
+        <dd class="col-sm-10">@Model.Tarefa.Status</dd>
+
+        <dt class="col-sm-2">Responsável</dt>
+        <dd class="col-sm-10">@Model.Tarefa.Responsavel</dd>
+
+        <dt class="col-sm-2">Data de Vencimento</dt>
+        <dd class="col-sm-10">@Model.Tarefa.DataVencimento.ToShortDateString()</dd>
+
+        <dt class="col-sm-2">Sprint Associada</dt>
+        <dd class="col-sm-10">@Model.Tarefa.Sprints?.Nome</dd> <!-- Assumindo que o SprintModel tem um atributo chamado Nome -->
+
+        <dt class="col-sm-2">Projeto Associado</dt>
+        <dd class="col-sm-10">@Model.Tarefa.Projetos?.Nome</dd>
+    </dl>
+
+    <a href="/Tarefas" class="btn btn-secondary">Voltar</a>
+</div>

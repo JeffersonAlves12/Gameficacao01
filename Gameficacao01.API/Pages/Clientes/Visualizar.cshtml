@@ -1,0 +1,36 @@
+@page
+@model Gameficacao01.API.Pages.Clientes.Visualizar
+@{
+    ViewData["Title"] = "Visualizar Clientes";
+}
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+    <hr>
+
+    <dl class="row">
+        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.Cliente.Id</dd>
+
+        <dt class="col-sm-2">Nome</dt>
+        <dd class="col-sm-10">@Model.Cliente.Nome</dd>
+
+        <dt class="col-sm-2">Email</dt>
+        <dd class="col-sm-10">@Model.Cliente.Email</dd>
+
+        <dt class="col-sm-2">Telefone</dt>
+        <dd class="col-sm-10">@Model.Cliente.Telefone</dd>
+
+        <dt class="col-sm-2">Projetos Associados</dt>
+        <dd class="col-sm-10">
+            <ul>
+                @foreach (var projeto in Model.Cliente.Projetos)
+                {
+                    <li>@projeto.Nome</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+
+    <a href="./Index" class="btn btn-secondary">Voltar</a>
+</div>

@@ -1,0 +1,58 @@
+@page
+@model Gameficacao01.API.Pages.Projetos.Criar
+@{
+    ViewData["Title"] = "Criar";
+}
+
+<html lang="en">
+<head>
+    <!-- ... -->
+    <title>Adicionar Novo Projeto</title>
+    <!-- ... -->
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Adicionar Novo Projeto</h2>
+        <hr>
+        <form method="post">
+            <!-- Nome do Projeto -->
+            <div class="form-group">
+                <label for="Nome">Nome:</label>
+                <input type="text" class="form-control" id="Nome" asp-for="Projeto.Nome" required />
+            </div>
+
+            <!-- Descrição do Projeto -->
+            <div class="form-group">
+                <label for="Descricao">Descrição:</label>
+                <textarea class="form-control" id="Descricao" asp-for="Projeto.Descricao" required></textarea>
+            </div>
+
+            <!-- Data de Início -->
+            <div class="form-group">
+                <label for="DataInicio">Data de Início:</label>
+                <input type="date" class="form-control" id="DataInicio" asp-for="Projeto.DataInicio" required />
+            </div>
+
+            <!-- Data de Conclusão Prevista -->
+            <div class="form-group">
+                <label for="DataConclusaoPrevista">Data de Conclusão Prevista:</label>
+                <input type="date" class="form-control" id="DataConclusaoPrevista" asp-for="Projeto.DataConclusaoPrevista" />
+            </div>
+
+            <!-- Status do Projeto -->
+            <div class="form-group">
+                <label for="Status">Status:</label>
+                <select class="form-control" id="Status" asp-for="Projeto.Status" required>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Concluído">Concluído</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="./Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+    <!-- scripts ... -->
+</body>
+</html>

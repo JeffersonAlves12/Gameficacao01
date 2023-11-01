@@ -1,0 +1,37 @@
+@page "/Equipes/Visualizar/{id:int}"
+@model Gameficacao01.API.Pages.Equipes.Visualizar
+
+@{
+    ViewData["Title"] = "Visualizar Equipe";
+}
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+    <hr>
+
+    <dl class="row">
+        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.Equipe.Id</dd>
+
+        <dt class="col-sm-2">Nome</dt>
+        <dd class="col-sm-10">@Model.Equipe.Nome</dd>
+
+        <dt class="col-sm-2">Descrição</dt>
+        <dd class="col-sm-10">@Model.Equipe.Descricao</dd>
+
+        <dt class="col-sm-2">Projeto Associado</dt>
+        <dd class="col-sm-10">@Model.Equipe.Projeto?.Nome</dd>
+
+        <dt class="col-sm-2">Membros da Equipe</dt>
+        <dd class="col-sm-10">
+            <ul>
+                @foreach (var membro in Model.Equipe.Membros)
+                {
+                    <li>@membro.Nome (Papel: @membro.Papel)</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+
+    <a href="/Equipes" class="btn btn-secondary">Voltar</a>
+</div>

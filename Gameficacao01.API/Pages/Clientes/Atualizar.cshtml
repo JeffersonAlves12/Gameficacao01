@@ -1,0 +1,54 @@
+@page
+@model Gameficacao01.API.Pages.Clientes.Atualizar
+@{
+    ViewData["Title"] = "Atualizar Cliente";
+}
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-4">Atualizar Cliente</h2>
+
+            <form method="post" id="clienteForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <input type="hidden" asp-for="ClienteModel.Id" />
+
+                <!-- Campo Nome do Cliente -->
+                <div class="form-group">
+                    <label asp-for="ClienteModel.Nome">Nome:</label>
+                    <input asp-for="ClienteModel.Nome" class="form-control" />
+                    <span asp-validation-for="ClienteModel.Nome" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Email do Cliente -->
+                <div class="form-group">
+                    <label asp-for="ClienteModel.Email">Email:</label>
+                    <input asp-for="ClienteModel.Email" class="form-control" />
+                    <span asp-validation-for="ClienteModel.Email" class="text-danger"></span>
+                </div>
+
+
+                <!-- Campo Telefone do Cliente -->
+                <div class="form-group">
+                    <label asp-for="ClienteModel.Telefone">Telefone:</label>
+                    <input asp-for="ClienteModel.Telefone" class="form-control" />
+                    <span asp-validation-for="ClienteModel.Telefone" class="text-danger"></span>
+                </div>
+
+                <!-- Botões -->
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-success">Atualizar</button>
+                    <a asp-page="/Clientes/Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            
+            </form>
+        </div>
+    </div>
+</div>
+
+
+            
+
+

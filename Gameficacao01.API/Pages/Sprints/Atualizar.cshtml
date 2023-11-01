@@ -1,0 +1,46 @@
+@page "/Sprints/Atualizar/{id:int}"
+@model Gameficacao01.API.Pages.Sprints.Atualizar
+@{
+    ViewData["Title"] = "Atualizar Sprint";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-4">Atualizar Sprint</h2>
+
+            <form method="post" id="sprintForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <input type="hidden" asp-for="SprintModel.Id" />
+
+                <!-- Campo Nome da Sprint -->
+                <div class="form-group">
+                    <label asp-for="SprintModel.Nome">Nome:</label>
+                    <input asp-for="SprintModel.Nome" class="form-control" />
+                    <span asp-validation-for="SprintModel.Nome" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Data Início -->
+                <div class="form-group">
+                    <label asp-for="SprintModel.DataInicio">Data de Início:</label>
+                    <input type="date" asp-for="SprintModel.DataInicio" class="form-control" />
+                    <span asp-validation-for="SprintModel.DataInicio" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Data de Término -->
+                <div class="form-group">
+                    <label asp-for="SprintModel.DataTermino">Data de Término:</label>
+                    <input type="date" asp-for="SprintModel.DataTermino" class="form-control" />
+                    <span asp-validation-for="SprintModel.DataTermino" class="text-danger"></span>
+                </div>
+
+                <!-- Botões -->
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-success">Atualizar</button>
+                    <a asp-page="/Sprints/Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

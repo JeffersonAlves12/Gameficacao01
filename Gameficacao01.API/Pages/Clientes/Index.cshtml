@@ -1,0 +1,58 @@
+@page
+@model Gameficacao01.API.Pages.Clientes.Index
+@{
+    ViewData["Title"] = "Lista de Clientes";
+}
+
+<form method="get">
+    <input type="text" asp-for="FiltroNome" placeholder="Filtrar por nome do Cliente" />
+    <button type="submit" class="btn btn-primary">Aplicar</button>
+</form>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-page="./Criar" class="btn btn-primary">Criar novo Cliente</a>
+            <!-- Adicione esse trecho onde deseja posicionar o botão -->
+            <a asp-page="./Associar" class="btn btn-secondary">Associar Projeto</a>
+        </div>
+
+    </div>
+
+    <hr />
+
+    <div class="mt-4">
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.ClienteList[0].Id)</th>
+                    <th>@Html.DisplayNameFor(model => model.ClienteList[0].Nome)</th>
+                    <th>@Html.DisplayNameFor(model => model.ClienteList[0].Email)</th>
+                    <th>@Html.DisplayNameFor(model => model.ClienteList[0].Telefone)</th>
+                    <th>Operações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cliente in Model.ClienteList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => cliente.Id)</td>
+                        <td>@Html.DisplayFor(model => cliente.Nome)</td>
+                        <td>@Html.DisplayFor(model => cliente.Email)</td>
+                        <td>@Html.DisplayFor(model => cliente.Telefone)</td>
+                        <td>
+                            <a asp-page="./Atualizar" asp-route-id="@cliente.Id"
+                                class="btn btn-warning btn-sm me-2">Editar</a>
+                            <a asp-page="./Visualizar" asp-route-id="@cliente.Id"
+                                class="btn btn-info btn-sm me-2">Visualizar</a>
+                            <a asp-page="./Deletar" asp-route-id="@cliente.Id" class="btn btn-danger btn-sm">Remover</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

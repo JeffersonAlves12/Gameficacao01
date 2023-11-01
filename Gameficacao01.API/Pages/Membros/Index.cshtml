@@ -1,0 +1,49 @@
+@page
+@model Gameficacao01.API.Pages.Membros.Index
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<html lang="en">
+<head>
+    <!-- ... -->
+    <title>Lista de Membros</title>
+    <!-- ... -->
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Lista de Membros</h2>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Papel</th>
+                    <th>Equipe</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var membro in Model.Membros)
+                {
+                    <tr>
+                        <td>@membro.Id</td>
+                        <td>@membro.Nome</td>
+                        <td>@membro.Papel</td>
+                        <td>@membro.Equipes?.Nome</td>
+                        <td>
+                            <a href="Membros/Atualizar/@membro.Id" class="btn btn-warning">Editar</a>
+
+                            <a href="Membros/Deletar/@membro.Id" class="btn btn-danger">Deletar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="Membros/Criar" class="btn btn-primary">Adicionar Membro</a>
+    </div>
+    <!-- scripts ... -->
+</body>
+</html>
